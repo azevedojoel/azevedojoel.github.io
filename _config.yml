@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Joel Azevedo
+tagline:          'An iterative approach to software and life.'
+description:      '<img style="margin-left:auto;margin-right:auto;margin:0 auto;" src="/public/profile.png" /><br/>Hello! I am a software craftsman taking an <a href="https://en.wikipedia.org/wiki/Iterative_and_incremental_development">iterative</a> approach to development and life.'
+url:              http://www.iterativetechnologies.com
+baseurl:          /
+
+author:
+  name:           'Joel Azevedo'
+  url:            https://twitter.com/azevejo
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://azevedojoel.github.io
