@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 ---
-<img src="/public/images/family.jpg" style="width:150px;margin-left:auto;margin-right:auto;margin:0 auto;"/>
+<img src="/public/images/family.jpg" style="margin-left:auto;margin-right:auto;margin:0 auto;"/>
 <p class="message">
 Creating something is all about problem-solving. <br/>-Philip Seymour Hoffman
 </p>
