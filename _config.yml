@@ -16,6 +16,10 @@ baseurl:          /
 author:
   name:           'Joel Azevedo'
   url:            https://twitter.com/azevejo
+social:
+  twitter:          azevejo
+  linkedin:         joelazevedo
+  github:           azevedojoel
 
 paginate:         5
 
