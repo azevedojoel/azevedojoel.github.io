@@ -11,7 +11,7 @@
 
   <title>
     
-      Post Zero &middot; Joel Azevedo
+      Hybrid App Development &middot; Joel Azevedo
     
   </title>
 
@@ -116,16 +116,69 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">Post Zero</h1>
-  <span class="post-date">07 Sep 2015</span>
-  <blockquote>
-<p>The beginning is the most important part of the work.<br/>
--Plato</p>
+  <h1 class="post-title">Hybrid App Development</h1>
+  <span class="post-date">08 Sep 2015</span>
+  <p>I do not have as much experience in mobile development as I would like. Although I am very comfortable with responsive design using JS and CSS I want to dive deeper into mobile development. Since getting my MacBook I’ve spent a little time in Xcode and doing a couple of ‘hello world’ things and playing with Swift but nothing too serious. I’ve heard Ionic and Cordova mentioned a few times lately and so I’m going to take a look. I’ll probably continue to learn some of the native Swift/Objective-C/Java features, but given how much fun Javascript has been lately going with a hybrid solution just seems good.</p>
+
+<h1>What is Cordova?</h1>
+
+<p>Cordova exposes many of the native device features through Javascript APIs.</p>
+
+<blockquote>
+<p><a href="http://cordova.apache.org/docs/en/5.0.0/guide_overview_index.md.html#Overview">Apache Cordova</a> is an open-source mobile development framework. It allows you to use standard web technologies such as HTML5, CSS3, and JavaScript for cross-platform development, avoiding each mobile platforms&#39; native development language. Applications execute within wrappers targeted to each platform, and rely on standards-compliant API bindings to access each device&#39;s sensors, data, and network status.</p>
 </blockquote>
 
-<p>I&#39;m creating a blog in Jekyll on a MacBook Pro. I did not think 8 months ago that I would enjoy working on a Mac...ever. But what do you know, I like the Mac. I also like my Windows 10 box. I even installed Ubuntu in a VM a few weeks ago but that one has not lasted, I haven&#39;t logged into it since the first day. I like technology and I like learning. I can&#39;t imagine anyone being in this field of software development and not consider themselves a lifetime learner. I am not a genius by any stretch of the imagination but I enjoy sitting down and approaching problems from many different view points.</p>
+<h1>Getting Cordova</h1>
 
-<p>Given my poor writing skills and extreme perfectionism I cannot image this blog will see too much attention but who knows.</p>
+<p>To install Cordova all you need to have is <a href="https://nodejs.org/">Node.js</a></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo npm install -g cordova</code></pre></div>
+
+<h1>Create the App</h1>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova create iterative com.iterative.hello HelloWorld</code></pre></div>
+
+<p>This will generate the skeleton project in a directory called iterative. The second and third arguments are optional. The second argument is an identifier and the third is the applications display title.</p>
+
+<h1>Add the iOS platform</h1>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>iterative <span class="c">#make sure you are in the directory</span>
+<span class="nv">$ </span>cordova platform add ios</code></pre></div>
+
+<p>You could also do android, windows8, etc...</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova platform add amazon-fireos
+<span class="nv">$ </span>cordova platform add android
+<span class="nv">$ </span>cordova platform add blackberry10
+<span class="nv">$ </span>cordova platform add firefoxos</code></pre></div>
+
+<p><img src="/public/images/8705FB8C-A532-4D0E-88D8-8AA55C9A3C0F.png" alt="Screenshot" title="Screenshot">
+Looks like the iOS folder is created with all of the necessary setup files.</p>
+
+<p><img src="/public/images/F50E7D30-E4E0-4DCA-B447-2FD2E2226DFB.png" alt="Screenshot" title="Screenshot">
+This is the project opened in Xcode. The www directory contains the stuff I am most curious about: the HTML/CSS/JS. I’m going to go ahead a make a couple of small changes: replace logo.png with my own and put in some different text. Small changes but just to see if it picks them up.</p>
+
+<h1>Build the App</h1>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova build</code></pre></div>
+
+<p>This will compile everything from the www directory to the specific platform. If I make any changes to the www files, as I did, you just need to run this again to compile it down the platform specific folders.
+Now I can either jump back into Xcode and click Run or do this</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cordova emulate</code></pre></div>
+
+<p><img src="/public/images/79B7F8A7-0D62-4366-82E2-17399D127DC5.png" alt="Screenshot" title="Screenshot">
+And here is my new Cordova App running in the iOS simulator.</p>
+
+<p>It is surprisingly simple to get up and running with Cordova. Just getting this far in such a short amount of time has made me far less intimidated with rich mobile development. I&#39;m looking forward to Ionic!</p>
+
+<h1>Links</h1>
+
+<p><a href="https://cordova.apache.org/">Cordova</a></p>
+
+<p><a href="http://cordova.apache.org/docs/en/3.4.0/guide_cli_index.md.html#The%20Command-Line%20Interface">The Command-Line Interface (CLI)</a></p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/Dn771545.aspx">Getting Started with Visual Studio Tools for Apache Cordova</a></p>
 
   
   <div id="disqus_thread"></div>
@@ -149,9 +202,9 @@
     
       <li>
         <h3>
-          <a href="/2015/09/08/hybrid-cordova/">
-            Hybrid App Development
-            <small>08 Sep 2015</small>
+          <a href="/2015/09/07/post-0/">
+            Post Zero
+            <small>07 Sep 2015</small>
           </a>
         </h3>
       </li>
